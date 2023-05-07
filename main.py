@@ -30,11 +30,11 @@ def check_billing(api_key):
         models = response.json()["data"]
         can_access = any(model["id"] == "gpt-4" for model in models)
 
-        print(f"总额度: {total_amount:.2f}美元\n已用额度: {total_usage:.2f}美元\n剩余额度: {remaining:.2f}美元\nAPI Key: {api_key} {'可以' if can_access else '不能'}访问 GPT-4""\n")
+        print(f"[*]Total amount: {total_amount:.2f} USD\n[*]Total usage: {total_usage:.2f} USD\n[*]Remaining amount: {remaining:.2f} USD\n{'[-]' if not can_access else '[+]'}API Key: {api_key} {'can' if can_access else 'cannot'} access GPT-4\n")
 
         return [total_amount, total_usage, remaining, can_access]
     except Exception as e:
-        print(f"查询失败: {e}")
+        print(f"Query failed: {e}")
         return [None, None, None, False]
 
 if __name__ == '__main__':
