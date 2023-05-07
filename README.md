@@ -1,5 +1,9 @@
 # OpenAI-Checker
 
+[English](https://github.com/endercatone/OpenAI-Checker)
+
+[中文](https://github.com/endercatone/OpenAI-Checker/blob/main/README_CN.md)
+
 ## Introduction
 `OpenAI-Checker` is a Python script that checks the billing and usage of an OpenAI API key and determines whether it can access the GPT-4 model.
 
